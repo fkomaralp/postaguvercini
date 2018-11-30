@@ -25,10 +25,10 @@
   "extra": {
     "laravel": {
       "providers": [
-        "Fkomaralp\\Turatel\\TuratelServiceProvider"
+        "Fkomaralp\\Postaguvercini\\PostaguverciniServiceProvider"
       ],
       "aliases": {
-        "Turatel": "Fkomaralp\\Turatel\\TuratelFacade"
+        "Turatel": "Fkomaralp\\Postaguvercini\\Postaguvercini"
       }
     }
   }

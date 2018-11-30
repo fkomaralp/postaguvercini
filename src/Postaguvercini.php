@@ -1,10 +1,10 @@
 <?php
 
-namespace Fkomaralp\Turatel;
+namespace Fkomaralp\Postaguvercini;
 
-use Fkomaralp\Turatel\Rest\Client;
+use Fkomaralp\Postaguvercini\Rest\Client;
 
-class Turatel extends Client
+class Postaguvercini extends Client
 {
     /**
      * @var string Base uri

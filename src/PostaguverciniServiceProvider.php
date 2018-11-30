@@ -1,10 +1,10 @@
 <?php
 
-namespace Fkomaralp\Turatel;
+namespace Fkomaralp\Postaguvercini;
 
 use Illuminate\Support\ServiceProvider;
 
-class TuratelServiceProvider extends ServiceProvider
+class PostaguverciniServiceProvider extends ServiceProvider
 {
      /**
      * Bootstrap services.
@@ -13,10 +13,10 @@ class TuratelServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $configPath = __DIR__ . '/../config/turatel.php';
-        $this->publishes([$configPath => config_path('turatel.php')], 'config');
+        $configPath = __DIR__ . '/../config/Postaguvercini.php';
+        $this->publishes([$configPath => config_path('Postaguvercini.php')], 'config');
 
-        $this->app->singleton('turatel', function($app){
+        $this->app->singleton('postaguvercini', function($app){
             return new Client();
         });
 

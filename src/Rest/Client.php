@@ -1,5 +1,5 @@
 <?php
-namespace Fkomaralp\Turatel\Rest;
+namespace Fkomaralp\Postaguvercini\Rest;
 
 use anlutro\cURL\cURL;
 use Spatie\ArrayToXml\ArrayToXml;

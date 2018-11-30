@@ -1,11 +1,11 @@
 <?php
 
-namespace Fkomaralp\Turatel\Facade;
+namespace Fkomaralp\Postaguvercini\Facade;
 
-use Fkomaralp\Turatel\Rest\Client;
+use Fkomaralp\Postaguvercini\Rest\Client;
 use Illuminate\Support\Facades\Facade;
 
-class Turatel extends Facade
+class Postaguvercini extends Facade
 {
     /**
      *  Get the registered name of the component.
