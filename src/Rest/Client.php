@@ -50,9 +50,10 @@ class Client
      */
     public function request($root, $data){
         $xml = ArrayToXml::convert($data, $root,true, 'UTF-8');
-        dd($xml);
+
         $curl = new cURL();
-        $request = $curl->newRawRequest("post", config("turatel.base_uri"), $xml)
+
+        $request = $curl->newRawRequest("post", config("postaguvercini.base_uri"), $xml)
             ->setHeader("Content-Type", "text/xml")
             ->setHeader("HTTP_PRETTY_PRINT", "TRUE");
 

@@ -1,9 +1,6 @@
 <?php
 
 return [
-    'username'      => 'xxx',
-    'password'      => 'xxx',
-    'channel_code'  => 'xxx',
-    'platform_id'   => 1,
-    'originator'    => 'xxx',  // default sender name | must be filled
+    'user'      => 'xxx',
+    'pwd'      => 'xxx'
 ];

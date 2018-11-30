@@ -9,10 +9,11 @@ class Postaguvercini extends Client
     /**
      * @var string Base uri
      */
-    protected $baseUri = "https://processor.smsorigin.com/xml/process.aspx";
+    protected $baseUri = "http://www.postaguvercini.com/api_xml/ISTEKTURU.ASP";
 
     /**
-     *   Create client
+     * Postaguvercini constructor.
+     * @param bool $useSsl
      */
     public function __construct($useSsl = true)
     {
@@ -28,6 +29,11 @@ class Postaguvercini extends Client
         return "__get";
     }
 
+    /**
+     * @param $name
+     * @param $arguments
+     * @return mixed
+     */
     public function __call($name, $arguments)
     {
         if (method_exists($this, $name)) {
