@@ -1,6 +1,6 @@
 {
-  "name": "fkomaralp/turatel",
-  "description": "Turatel API Client",
+  "name": "fkomaralp/postaguvercini",
+  "description": "Posta Güvercini API Client",
   "type": "library",
   "license": "MIT",
   "version":"1.0",
@@ -19,7 +19,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Fkomaralp\\Turatel\\": "src"
+      "Fkomaralp\\Postaguvercini\\": "src"
     }
   },
   "extra": {
@@ -28,7 +28,7 @@
         "Fkomaralp\\Postaguvercini\\PostaguverciniServiceProvider"
       ],
       "aliases": {
-        "Turatel": "Fkomaralp\\Postaguvercini\\Postaguvercini"
+        "Postaguvercini": "Fkomaralp\\Postaguvercini\\Postaguvercini"
       }
     }
   }
