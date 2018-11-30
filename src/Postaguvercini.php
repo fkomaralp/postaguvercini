@@ -18,9 +18,9 @@ class Postaguvercini extends Client
     {
         parent::__construct();
 
-        if(!$useSsl){
-            $this->baseUri = "http://processor.smsorigin.com/xml/process.aspx";
-        }
+//        if(!$useSsl){
+//            $this->baseUri = "http://processor.smsorigin.com/xml/process.aspx";
+//        }
     }
 
     public function __get($name)

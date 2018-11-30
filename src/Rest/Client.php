@@ -15,12 +15,12 @@ class Client
     public function __construct()
     {
         $data = [
-            "PlatformID" => config("turatel.platform_id"),
-            "ChannelCode" => config("turatel.channel_code"),
-            "UserName" => config("turatel.username"),
-            "PassWord" => config("turatel.password"),
-            "Originator" => config("turatel.originator"),
-//            "Contact" => 1,
+            "CLIENT" => [
+                '_attributes' => [
+                    "user" => config("postaguvercini.username"),
+                    "pwd" => config("postaguvercini.password")
+                ]
+            ]
         ];
 
         $this->xml = $data;
@@ -33,12 +33,14 @@ class Client
      */
     public function sendSms($message = "", $numbers = [] )
     {
-        $this->xml["Command"] = 0;
-        $this->xml["Mesgbody"] = $message;
-        $this->xml["Type"] = 2;
-        $this->xml["Numbers"] = implode(";", $numbers);
-
-        return $this->request("MainmsgBody", $this->xml);
+        $this->xml["INSERTMSG"] = [
+                "_attributes" => [
+                    "text"=>$message,
+                    "dt" => date("Y/m/d H:s")
+                ],
+            "TO" => $numbers
+        ];
+        return $this->request("SMS-InsRequest", $this->xml);
     }
 
     /**
@@ -48,7 +50,7 @@ class Client
      */
     public function request($root, $data){
         $xml = ArrayToXml::convert($data, $root,true, 'UTF-8');
-
+        dd($xml);
         $curl = new cURL();
         $request = $curl->newRawRequest("post", config("turatel.base_uri"), $xml)
             ->setHeader("Content-Type", "text/xml")
